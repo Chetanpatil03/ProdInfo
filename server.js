@@ -7,12 +7,13 @@ app.use(express.json());
 app.use(express.static("public")); // serve frontend
 
 // ✅ Connect to MongoDB
-mongoose.connect("mongodb+srv://chetan_03:Chetan@2003@cluster0.xv72skq.mongodb.net/", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 })
-.then(() => console.log("✅ Connected to MongoDB"))
-.catch(err => console.log(err));
+.then(() => console.log("✅ Connected to MongoDB Atlas"))
+.catch(err => console.error("❌ DB Connection Error:", err));
+
 
 // ➕ Add Product
 app.post("/add", async (req, res) => {
