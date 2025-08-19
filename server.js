@@ -7,10 +7,10 @@ app.use(express.json());
 app.use(express.static("public")); // serve frontend
 
 // ✅ Connect to MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/productDB", {
+mongoose.connect("mongodb+srv://chetan_03:Chetan@2003@cluster0.xv72skq.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
-})
+});
 .then(() => console.log("✅ Connected to MongoDB"))
 .catch(err => console.log(err));
 
