@@ -10,7 +10,7 @@ app.use(express.static("public")); // serve frontend
 mongoose.connect("mongodb+srv://chetan_03:Chetan@2003@cluster0.xv72skq.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true
-});
+})
 .then(() => console.log("✅ Connected to MongoDB"))
 .catch(err => console.log(err));
 
