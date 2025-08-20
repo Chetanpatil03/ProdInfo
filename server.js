@@ -6,16 +6,14 @@ const app = express();
 app.use(express.json());
 app.use(express.static("public")); // serve frontend
 
-// ✅ Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+
+mongoose.connect(process.env.MONGO_URI, { //connection string set at the environment variable of render.
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log("✅ Connected to MongoDB Atlas"))
 .catch(err => console.error("❌ DB Connection Error:", err));
 
-
-// ➕ Add Product
 app.post("/add", async (req, res) => {
   try {
     const { name, price, stock } = req.body; // ✅ only 3 fields
@@ -27,22 +25,22 @@ app.post("/add", async (req, res) => {
   }
 });
 
-// 📖 Get All Products
+//get all available products
 app.get("/products", async (req, res) => {
   const products = await Product.find();
   res.json(products);
 });
 
-// 📖 Get One Product
+
 app.get("/products/:id", async (req, res) => {
   const product = await Product.findById(req.params.id);
   res.json(product);
 });
 
-// ✏️ Update Product
+
 app.put("/update/:id", async (req, res) => {
   try {
-    const { name, price, stock } = req.body; // ✅ only 3 fields
+    const { name, price, stock } = req.body;
     const updatedProduct = await Product.findByIdAndUpdate(
       req.params.id,
       { name, price, stock },
@@ -54,13 +52,12 @@ app.put("/update/:id", async (req, res) => {
   }
 });
 
-// ❌ Delete Product
+
 app.delete("/delete/:id", async (req, res) => {
   await Product.findByIdAndDelete(req.params.id);
   res.send("Product deleted successfully");
 });
 
-// 🚀 Start Server
 app.listen(5000, () => {
-  console.log("Server running at http://localhost:5000");
+  console.log("Server running");
 });

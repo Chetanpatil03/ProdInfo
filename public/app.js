@@ -1,7 +1,6 @@
-// 🌍 Your backend base URL
 const BASE_URL = "https://prodinfo-n7yn.onrender.com";
 
-// 🚀 Load all products when page opens
+// Load all products when page opens
 window.onload = loadProducts;
 
 // Fetch and display all products
@@ -25,7 +24,7 @@ async function loadProducts() {
   });
 }
 
-// Add product
+// To add new product
 document.getElementById("productForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -46,7 +45,7 @@ document.getElementById("productForm").addEventListener("submit", async (e) => {
   }
 });
 
-// Delete product
+// To delete product
 async function deleteProduct(id) {
   if (confirm("Are you sure you want to delete this product?")) {
     await fetch(`${BASE_URL}/delete/${id}`, { method: "DELETE" });
@@ -54,7 +53,6 @@ async function deleteProduct(id) {
   }
 }
 
-// Edit product (simple prompt version)
 async function editProduct(id) {
   const newName = prompt("Enter new product name:");
   const newPrice = prompt("Enter new price:");
