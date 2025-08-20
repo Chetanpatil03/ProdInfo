@@ -11,8 +11,8 @@ mongoose.connect(process.env.MONGO_URI, { //connection string set at the environ
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log("✅ Connected to MongoDB Atlas"))
-.catch(err => console.error("❌ DB Connection Error:", err));
+.then(() => console.log("Connected to MongoDB Atlas"))
+.catch(err => console.error("DB Connection Error:", err));
 
 app.post("/add", async (req, res) => {
   try {
