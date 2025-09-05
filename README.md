@@ -34,3 +34,20 @@ Create a .env file in the root directory:
 
 MONGO_URI=your-mongodb-atlas-connection-string
 PORT=5000
+
+4. Run the project
+
+nodemon server.js
+
+Server runs at: http://localhost:5000
+
+
+---
+
+🌍 Deployment
+
+Backend: Render
+
+Database: MongoDB Atlas
+
+Frontend: Hosted on Render (Netlify planned)
