@@ -8,3 +8,11 @@ A simple **CRUD (Create, Read, Update, Delete)** application for managing produc
 - **Hosting:** Render (backend + frontend), Netlify (planned for frontend)
 
 ---
+## ✨ Features
+- Add new products with **name, price, stock**  
+- View all products in a clean UI  
+- Update product details  
+- Delete products  
+- MongoDB Atlas integration for persistent storage  
+
+--
