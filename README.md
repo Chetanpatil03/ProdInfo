@@ -5,8 +5,8 @@ A simple **CRUD (Create, Read, Update, Delete)** application for managing produc
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB Atlas  
-- **Hosting:** Render (backend + frontend), Netlify (planned for frontend)
-
+- **Hosting:** Render (backend), Netlify (frontend)
+- **Link:** https://prod-info.netlify.app
 ---
 ## ✨ Features
 - Add new products with **name, price, stock**  
@@ -47,7 +47,9 @@ Server runs at: http://localhost:5000
 🌍 Deployment
 
 Backend: Render
-
 Database: MongoDB Atlas
+Frontend: Hosted on Netlify
 
-Frontend: Hosted on Render (Netlify planned)
+---
+
+Created By 
