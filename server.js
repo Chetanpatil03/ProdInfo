@@ -63,7 +63,7 @@ app.listen(5000, () => {
 });
 
 const cors = require('cors');
-const allowedOrigin = process.env.FRONTEND_URL || 'https://prod-info.netlify.app'; // or your netlify URL
+const allowedOrigin = process.env.FRONTEND_URL || 'https://prod-info.netlify.app/'; // or your netlify URL
 
 app.use(cors({
   origin: allowedOrigin,   // or '*' during debugging
