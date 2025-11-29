@@ -46,10 +46,10 @@ Server runs at: http://localhost:5000
 
 🌍 Deployment
 
-Backend: Render
-Database: MongoDB Atlas
-Frontend: Hosted on Netlify
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+- **Frontend:** Hosted on Netlify
 
 ---
 
-Created By 
+Chetan Bachchhav ❤️
