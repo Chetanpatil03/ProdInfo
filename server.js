@@ -61,3 +61,12 @@ app.delete("/delete/:id", async (req, res) => {
 app.listen(5000, () => {
   console.log("Server running");
 });
+
+const cors = require('cors');
+const allowedOrigin = process.env.FRONTEND_URL || 'https://prod-info.netlify.app'; // or your netlify URL
+
+app.use(cors({
+  origin: allowedOrigin,   // or '*' during debugging
+  methods: ['GET','POST','PUT','DELETE'],
+}));
+
